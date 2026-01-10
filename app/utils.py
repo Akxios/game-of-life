@@ -1,4 +1,4 @@
-from src.config import GRID_WIDTH, GRID_HEIGHT
+from app.config import GRID_WIDTH, GRID_HEIGHT
 
 
 def get_neighbors(pos):

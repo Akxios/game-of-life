@@ -1,5 +1,5 @@
 import random
-from src.config import GRID_HEIGHT, GRID_WIDTH
+from app.config import GRID_HEIGHT, GRID_WIDTH
 
 
 def generate(num):

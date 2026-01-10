@@ -1,8 +1,8 @@
 import pygame
 import random
-from src.config import WIDTH, HEIGHT, GRID_WIDTH, GRID_HEIGHT, TILE_SIZE, GREEN, RED, BLUE, BLACK, GREY, FPS
-from src.grid import adjust_grid, draw_grid
-from src.generate import generate_density
+from app.config import WIDTH, HEIGHT, GRID_WIDTH, GRID_HEIGHT, TILE_SIZE, GREEN, RED, BLUE, BLACK, GREY, FPS
+from app.grid import adjust_grid, draw_grid
+from app.generate import generate_density
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))

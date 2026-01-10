@@ -1,6 +1,6 @@
 import pygame
-from src.utils import get_neighbors, get_neighbors_infinity
-from src.config import TILE_SIZE, BLACK, BLUE, GREEN, RED, GRID_HEIGHT, GRID_WIDTH, WIDTH, HEIGHT
+from app.utils import get_neighbors, get_neighbors_infinity
+from app.config import TILE_SIZE, BLACK, BLUE, GREEN, RED, GRID_HEIGHT, GRID_WIDTH, WIDTH, HEIGHT
 
 
 def draw_grid(positions, born, died, use_colors, screen):
