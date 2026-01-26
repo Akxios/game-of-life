@@ -1,6 +1,17 @@
 import pygame
-from app.utils import get_neighbors, get_neighbors_infinity
-from app.config import TILE_SIZE, BLACK, BLUE, GREEN, RED, GRID_HEIGHT, GRID_WIDTH, WIDTH, HEIGHT
+
+from app.config import (
+    BLACK,
+    BLUE,
+    GREEN,
+    GRID_HEIGHT,
+    GRID_WIDTH,
+    HEIGHT,
+    RED,
+    TILE_SIZE,
+    WIDTH,
+)
+from app.utils import get_neighbors_infinity
 
 
 def draw_grid(positions, born, died, use_colors, screen):
@@ -34,14 +45,14 @@ def adjust_grid(positions):
         neighbors = get_neighbors_infinity(position)
         all_neighbors.update(neighbors)
 
-        neighbors =  list(filter(lambda x: x in positions, neighbors))
+        neighbors = list(filter(lambda x: x in positions, neighbors))
 
         if len(neighbors) in [2, 3]:
             new_positions.add(position)
 
     for position in all_neighbors:
         neighbors = get_neighbors_infinity(position)
-        neighbors =  list(filter(lambda x: x in positions, neighbors))
+        neighbors = list(filter(lambda x: x in positions, neighbors))
 
         if len(neighbors) == 3:
             new_positions.add(position)

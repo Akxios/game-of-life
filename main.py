@@ -1,8 +1,14 @@
 import pygame
-import random
-from app.config import WIDTH, HEIGHT, GRID_WIDTH, GRID_HEIGHT, TILE_SIZE, GREEN, RED, BLUE, BLACK, GREY, FPS
-from app.grid import adjust_grid, draw_grid
+
+from app.config import (
+    FPS,
+    GREY,
+    HEIGHT,
+    TILE_SIZE,
+    WIDTH,
+)
 from app.generate import generate_density
+from app.grid import adjust_grid, draw_grid
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -61,30 +67,30 @@ def main():
                     positions = set()
                     playing = False
                     count = 0
-                
+
                 elif event.key == pygame.K_g:
                     # positions = gen(random.randrange(4, 10) * GRID_WIDTH)
                     positions = generate_density(0.2)
 
                 elif event.key == pygame.K_EQUALS:
                     update_freq = max(1, update_freq - 1)
-                
+
                 elif event.key == pygame.K_MINUS:
                     update_freq += 1
-                
+
                 elif event.key == pygame.K_n and not playing:
                     prev = positions.copy()
                     positions = adjust_grid(positions)
                     born = positions - prev
                     died = prev - positions
-                
+
                 elif event.key == pygame.K_v:
                     use_colors = not use_colors
 
         screen.fill(GREY)
         draw_grid(positions, born, died, use_colors, screen)
         pygame.display.update()
-    
+
     pygame.quit()
 
 

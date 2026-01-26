@@ -1,11 +1,11 @@
-from app.config import GRID_WIDTH, GRID_HEIGHT
+from app.config import GRID_HEIGHT, GRID_WIDTH
 
 
 def get_neighbors(pos):
     """
     Обычное получение списка соседий
     """
-    x,y = pos
+    x, y = pos
 
     neighbors = []
 
