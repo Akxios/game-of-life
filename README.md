@@ -47,12 +47,9 @@ git clone https://github.com/Akxios/game-of-life.git
 cd game-of-life
 ```
 
-### 2. Создаём виртуальное окружение
-
+### 2. Устанавливаем зависимости
 ```bash
-1. python3 -m venv .venv
-2.1 .venv\Scripts\activate (Windows)
-2.2 source .venv/bin/activate (Linux)
+1. uv sync
 ```
 
 ### 3. Запускаем
